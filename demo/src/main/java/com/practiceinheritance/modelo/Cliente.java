@@ -1,4 +1,4 @@
-package com.practiceinheritance;
+package com.practiceinheritance.modelo;
 
 public class Cliente implements Autenticable {
     private String nombre;

@@ -1,5 +1,8 @@
 package com.practiceinheritance;
 
+import com.practiceinheritance.modelo.Funcionario;
+import com.practiceinheritance.modelo.Gerente;
+
 public class TestFuncionario {
     public static void main(String[] args) {
         Funcionario diego = new Gerente();

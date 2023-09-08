@@ -1,4 +1,4 @@
-package com.practiceinheritance;
+package com.practiceinheritance.modelo;
 
 public abstract class Cuenta {
     protected double saldo;
@@ -21,21 +21,22 @@ public abstract class Cuenta {
 
     public abstract void depositar(double valor);
 
-    public boolean retirar(double valor) {
-        if (this.saldo >= valor) {
-            this.saldo -= valor;
-            System.out.println("Your withdraw is sucess, your money withdraw is " + valor);
-            return true;
+    public void retirar(double valor) throws SaldoInsuficienteException {
+        if (this.saldo < valor) {
+            throw new SaldoInsuficienteException("Saldo Insuficiente");
         } else {
-            System.out.println("The desired amount to withdraw is greater than the amount of existing balance");
-            return false;
-        }
 
+        }
+        this.saldo -= valor;
     }
 
     public boolean transferir(double valor, Cuenta cuenta) {
         if (this.saldo >= valor) {
-            this.retirar(valor);
+            try {
+                this.retirar(valor);
+            } catch (SaldoInsuficienteException e) {
+                e.printStackTrace();
+            }
             cuenta.depositar(valor);
             System.out.println("Haz logrado una transferencia exitosa hacia " + cuenta + "de una cantidad de " + valor);
             return true;

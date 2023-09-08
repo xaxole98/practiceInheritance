@@ -1,5 +1,10 @@
 package com.practiceinheritance;
 
+import com.practiceinheritance.modelo.Contador;
+import com.practiceinheritance.modelo.ControlBonificacion;
+import com.practiceinheritance.modelo.Funcionario;
+import com.practiceinheritance.modelo.Gerente;
+
 public class TestControlBonificacion {
     public static void main(String[] args) {
         Funcionario diego = new Contador();

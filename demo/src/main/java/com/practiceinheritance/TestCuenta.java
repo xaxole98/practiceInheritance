@@ -1,5 +1,8 @@
 package com.practiceinheritance;
 
+import com.practiceinheritance.modelo.CuentaAhorros;
+import com.practiceinheritance.modelo.CuentaCorriente;
+
 public class TestCuenta {
     public static void main(String[] args) {
         CuentaCorriente cc = new CuentaCorriente(1, 1);

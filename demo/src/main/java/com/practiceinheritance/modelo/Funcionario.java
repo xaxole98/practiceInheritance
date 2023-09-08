@@ -1,4 +1,4 @@
-package com.practiceinheritance;
+package com.practiceinheritance.modelo;
 
 public abstract class Funcionario {
     private String nombre;

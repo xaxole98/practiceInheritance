@@ -1,4 +1,4 @@
-package com.practiceinheritance;
+package com.practiceinheritance.modelo;
 
 public class Gerente extends Funcionario implements Autenticable {
     private AutenticacionUtil util;

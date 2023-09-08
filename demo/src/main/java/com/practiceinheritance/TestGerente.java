@@ -1,5 +1,7 @@
 package com.practiceinheritance;
 
+import com.practiceinheritance.modelo.Gerente;
+
 public class TestGerente {
     public static void main(String[] args) {
         Gerente alex = new Gerente();
