@@ -1,6 +1,6 @@
 package com.practiceinheritance.modelo;
 
-public abstract class Cuenta {
+public abstract class Cuenta implements Comparable<Cuenta> {
     protected double saldo;
     private int agencia;
     private int numero;
@@ -17,6 +17,13 @@ public abstract class Cuenta {
             System.out.println("Se ha creado existosamente una nueva cuenta");
         }
         total++;
+    }
+
+    @Override
+    public String toString() {
+        String cuenta = "Numero: " + this.numero + " Agencia:" + this.agencia + " Nombre del Titular: "
+                + this.titular.getNombre();
+        return cuenta;
     }
 
     public abstract void depositar(double valor);
@@ -72,6 +79,11 @@ public abstract class Cuenta {
 
     public static int getTotal() {
         return Cuenta.total;
+    }
+
+    @Override
+    public int compareTo(Cuenta arg0) {
+        return Integer.compare(this.agencia, arg0.getAgencia());
     }
 
 }
